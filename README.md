@@ -1,1 +1,1 @@
-# RestAssured-Api-Framework
+# Reqres-Api-Framework
