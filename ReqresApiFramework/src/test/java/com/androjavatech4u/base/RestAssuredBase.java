@@ -6,10 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.http.HttpStatus;
-//import org.apache.commons.io.FileUtils;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
-//import org.openqa.selenium.WebDriver;
+
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -43,8 +41,7 @@ public class RestAssuredBase {
 		RestAssured.baseURI = baseUrl;
 		validatableResponse = RestAssured.given().when().header("Content-Type", "application/json").body(jsonPayload)
 				.post(endPointURL).then().assertThat();
-
-//.statusCode(400);
+           //.statusCode(400);
 		return validatableResponse;
 	}
 
@@ -89,6 +86,7 @@ public class RestAssuredBase {
 
 	}
 
+	// Extent Report Code
 	@BeforeMethod
 	public void setUpReport(Method method) {
 

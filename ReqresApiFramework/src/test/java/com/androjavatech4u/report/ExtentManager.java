@@ -20,7 +20,7 @@ public final class ExtentManager {
 	public synchronized static ExtentReports getExtentReportsInstance() {
 		if (reports == null) {
 			htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\ReqresApi.html");
-			htmlReporter.config().setReportName("RestAssured"); // yeh 17 line main store hoga
+			htmlReporter.config().setReportName("RestAssured"); 
 			htmlReporter.config().setDocumentTitle("Reqres Api Test Report ");
 			htmlReporter.config().setTheme(Theme.DARK);
 			reports = new ExtentReports();
@@ -35,14 +35,5 @@ public final class ExtentManager {
 		}
 	}
 
-	public static ExtentReports getInstance() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public static Object getReporter() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
